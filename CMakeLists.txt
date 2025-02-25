@@ -1,6 +1,12 @@
 cmake_minimum_required(VERSION 3.19...3.30)
 project(tokenizers_cpp C CXX)
 
+LIST(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+INCLUDE(cmake/ModuleImport.cmake)
+INCLUDE(cmake/ModuleCompileOptions.cmake)
+
+ModuleSetCompileOptions()
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
